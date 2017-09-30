@@ -6,8 +6,22 @@
 
   <div>
     <p>Content</p>
+    <div id="editor">hello world</div>
     <%= f.text_area(:content, size: "100x6") %>
   </div>
+<div>
+
+</div>
+
+
+<script src="/ace-builds/src-noconflict/ace.js" type="text" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/textmate");
+    editor.getSession().setMode("ace/mode/javascript");
+</script>
 
   <%= f.submit %>
 <% end %>
+
+

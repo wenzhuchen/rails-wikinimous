@@ -1,7 +1,10 @@
-<h1><%= @article.title %></h1>
+<div>
+<%= raw markdown(@article.title) %>
 <%= link_to "Edit the article", edit_article_path %>
-<p><%= @article.content %></p>
-
+</div>
+<div>
+<%= raw markdown(@article.content) %>
 <%= link_to "back to index", articles_path %>
+</div>
 
 
